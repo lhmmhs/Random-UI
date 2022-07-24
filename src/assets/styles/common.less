@@ -1,5 +1,5 @@
-@import './var';
 @import './ripple';
+@import './var';
 
 :root {
   --font-size-xs: @font-size-xs;
@@ -7,8 +7,8 @@
   --font-size-md: @font-size-md;
   --font-size-lg: @font-size-lg;
 
-  --color-body: @color-body;
-  --color-text: @color-text;
+  --color-white: @color-white;
+  --color-black: @color-black;
   --color-primary: @color-primary;
   --color-info: @color-info;
   --color-success: @color-success;
@@ -22,4 +22,8 @@
   --shadow-key-umbra-opacity: @shadow-key-umbra-opacity;
   --shadow-key-penumbra-opacity: @shadow-key-penumbra-opacity;
   --shadow-key-ambient-opacity: @shadow-key-ambient-opacity;
+}
+
+* {
+  box-sizing: border-box;
 }

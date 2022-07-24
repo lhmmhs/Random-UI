@@ -1,3 +1,5 @@
+import type { Directive } from 'vue';
+
 function computeRippleStyles(element, event) {
   const { top, left } = element.getBoundingClientRect();
   const { clientWidth, clientHeight } = element;
@@ -79,7 +81,7 @@ function createRipple(event) {
   window.setTimeout(task, 60);
 }
 
-const ripple = {
+const ripple: Directive = {
   mounted(el) {
     el._ripple = {
       tasker: null,

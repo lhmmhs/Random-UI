@@ -1,17 +1,16 @@
-<script setup>
-import AceButton from '@/components/Button';
+<script lang="ts" setup>
+import vButton from '@/components/button';
 </script>
 
 <template>
   <div class="container">
-    <ace-button type="primary">按钮</ace-button>
+    <v-button>按钮</v-button>
   </div>
 </template>
 
 <style>
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 400px;
+  margin: 0 auto;
 }
 </style>
