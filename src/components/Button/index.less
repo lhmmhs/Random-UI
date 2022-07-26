@@ -12,13 +12,17 @@
 
 @button-round-padding: 6px;
 
-.v-button {
+.random-button {
   font-weight: 500;
   cursor: pointer;
   outline: none;
   border: 0 none;
   border-radius: 4px;
   line-height: 1;
+
+  .random-icon + &__content {
+    margin-left: 8px;
+  }
 
   &:active {
     box-shadow: 0 3px 5px -1px var(--shadow-key-umbra-opacity), 0 5px 8px 0 var(--shadow-key-penumbra-opacity),
@@ -72,21 +76,25 @@
   &--normal {
     height: @button-normal-height;
     padding: @button-normal-padding;
+    font-size: @font-size-md;
   }
 
   &--mini {
     height: @button-mini-height;
     padding: @button-mini-padding;
+    font-size: @font-size-xs;
   }
 
   &--small {
     height: @button-small-height;
     padding: @button-small-padding;
+    font-size: @font-size-sm;
   }
 
   &--large {
     height: @button-large-height;
     padding: @button-large-padding;
+    font-size: @font-size-lg;
   }
 
   &--disabled {

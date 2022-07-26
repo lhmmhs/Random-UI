@@ -1,6 +1,5 @@
 <template>
   <button
-    v-ripple
     :class="
       classes(
         BEM(),
@@ -15,8 +14,8 @@
     :disabled="disabled"
     @click="handleClick"
   >
-    <span v-show="loading">加载中</span>
-    <span>
+    <Icon v-if="loading" name="loading"></Icon>
+    <span :class="classes(BEM('content'))">
       <slot />
     </span>
   </button>
@@ -26,10 +25,11 @@
 import { defineComponent } from 'vue';
 import { buttonProps } from './props';
 import { createNamespace } from '@/utils';
+import Icon from '@/components/Icon';
 
 const { BEM, classes } = createNamespace('button');
 
-defineComponent({ name: 'VButton' });
+defineComponent({ name: 'RandomButton' });
 defineProps(buttonProps);
 const emit = defineEmits(['click']);
 

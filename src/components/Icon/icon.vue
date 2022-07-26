@@ -1,6 +1,6 @@
 <template>
   <svg
-    :class="classes(BEM())"
+    :class="classes(BEM(), [isLoadingIcon, BEM('--loading')])"
     :style="{
       color: props.color,
       fontSize: props.size,
@@ -23,6 +23,7 @@ defineComponent({ name: 'RandomIcon' });
 const props = defineProps(iconProps);
 
 const iconName = computed(() => `#random-${props.name}`);
+const isLoadingIcon = computed(() => props.name === 'loading');
 </script>
 
 <style lang="less">

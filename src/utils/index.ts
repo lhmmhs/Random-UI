@@ -2,7 +2,7 @@ type ClassName = string | undefined | null;
 type Classes = (ClassName | [boolean, ClassName, ClassName?])[];
 
 export function createNamespace(name: string) {
-  const namespace = `v-${name}`;
+  const namespace = `random-${name}`;
 
   const BEM = (suffix?: string) => {
     if (!suffix) return namespace;
